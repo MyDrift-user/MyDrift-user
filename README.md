@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-Hi there 👋, I'm MyDrift, an open source contributor 🛠️. 
+I'm MyDrift, an open source contributor 🛠️. 
 I'm passionate about building high-quality, user-friendly software 📱🖥️. 
 I'm also a big fan of open source software, and I love contributing to projects that make a difference in the world 🌎.
 
