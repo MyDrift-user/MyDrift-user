@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-<h3 align="center">MyDrift</h3>
+<h3 MyDrift/h3>
 
 
 # 💫 About Me:
