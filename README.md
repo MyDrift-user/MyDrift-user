@@ -1,5 +1,25 @@
 ### Hi there 👋
 
+<h3 align="center">I'm MyDrift, an</h3>
+
+
+# 💫 About Me:
+I'm passionate about building high-quality, user-friendly software 📱🖥️. 
+I'm also a big fan of open source software, and I love contributing to projects that make a difference in the world 🌎.
+
+
+## 🌐 Socials:
+[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)]([https://discord.gg/D9a8EDB6G6](https://discord.com/users/679006161554505729)) 
+
+Here are some of the technologies I'm proficient in:
+
+* Programming languages: Python 🐍, JavaScript 🐠, C/C# 💻
+* Web development: HTML 🕸️, CSS 🎨, JavaScript 🐠
+* Prefered HyperVisor: Proxmox VE ⚡🦎
+* Cloud computing: Azure 🌊
+* DevOps: GitHub
+
+* 📫 : contact@mdiana.ch
 <!--
 **MyDrift-user/MyDrift-user** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -13,7 +33,7 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
+
 
 I'm MyDrift, an open source contributor 🛠️. 
 I'm passionate about building high-quality, user-friendly software 📱🖥️. 
@@ -28,8 +48,10 @@ Here are some of the technologies I'm proficient in:
 * Prefered HyperVisor: Proxmox VE ⚡🦎
 * Cloud computing: Azure 🌊
 * Databases: MySQL 🐬
-* DevOps: GitHub 🐱
+* DevOps: GitHub
 
 I'm always looking for new challenges and opportunities to learn and grow. 
 If you're interested in collaborating on a project or just chatting about tech, feel free to reach out!
 * 📫 : contact@mdiana.ch
+
+-->
