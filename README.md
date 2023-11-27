@@ -14,6 +14,8 @@ I'm also a big fan of open source software, and I love contributing to projects 
 
 https://fr.pons.com/tableaux-de-conjugaison/fran%C3%A7ais/
 
+https://quizlet.com/651935557/tourismus-und-verkehr-basiswortschatz-flash-cards/?funnelUUID=c92c85e7-c213-40c2-8a8b-dbc3a0371d4b
+
 Here are some of the technologies I'm proficient in:
 
 * Programming languages: Python 🐍, JavaScript 🐠, C/C# 💻
