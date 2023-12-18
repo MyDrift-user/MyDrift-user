@@ -1,104 +1,21 @@
-| Base form | Past Simple | Past Participle |
-|-----------|-------------|-----------------|
-| be        | was/were    | been            |
-| become    | became      | become          |
-| begin     | began       | begun           |
-| bend      | bent        | bent            |
-| bet       | bet         | bet             |
-| bite      | bit         | bitten          |
-| blow      | blew        | blown           |
-| break     | broke       | broken          |
-| bring     | brought     | brought         |
-| build     | built       | built           |
-| burn      | burned/burnt| burned/burnt    |
-| buy       | bought      | bought          |
-| bear      | bore        | borne/born      |
-| beat      | beat        | beaten          |
-| broadcast | broadcast   | broadcast       |
-| burst     | burst       | burst           |
-| catch     | caught      | caught          |
-| choose    | chose       | chosen          |
-| come      | came        | come            |
-| cost      | cost        | cost            |
-| cut       | cut         | cut             |
-| cast      | cast        | cast            |
-| do        | did         | done            |
-| draw      | drew        | drawn           |
-| dream     | dreamed/dreamt | dreamed/dreamt |
-| drink     | drank       | drunk           |
-| drive     | drove       | driven          |
-| deal      | dealt       | dealt           |
-| dig       | dug         | dug             |
-| eat       | ate         | eaten           |
-| fall      | fell        | fallen          |
-| feel      | felt        | felt            |
-| fight     | fought      | fought          |
-| find      | found       | found           |
-| fly       | flew        | flown           |
-| forget    | forgot      | forgotten       |
-| forgive   | forgave     | forgiven        |
-| freeze    | froze       | frozen          |
-| get       | got         | gotten/got      |
-| give      | gave        | given           |
-| grind     | ground      | ground          |
-| go        | went        | gone            |
-| grow      | grew        | grown           |
-| have      | had         | had             |
-| hear      | heard       | heard           |
-| hide      | hid         | hidden          |
-| hit       | hit         | hit             |
-| hold      | held        | held            |
-| hurt      | hurt        | hurt            |
-| hang      | hung        | hung            |
-| keep      | kept        | kept            |
-| know      | knew        | known           |
-| kneel     | knelt       | knelt           |
-| leave     | left        | left            |
-| lend      | lent        | lent            |
-| let       | let         | let             |
-| lie       | lay         | lain            |
-| lose      | lost        | lost            |
-| lead      | led         | led             |
-| lean      | leant       | leant           |
-| leap      | leapt       | leapt           |
-| learn     | learnt      | learnt          |
-| light     | lit         | lit             |
-| make      | made        | made            |
-| mean      | meant       | meant           |
-| meet      | met         | met             |
-| pay       | paid        | paid            |
-| put       | put         | put             |
-| read      | read        | read            |
-| ride      | rode        | ridden          |
-| ring      | rang        | rung            |
-| rise      | rose        | risen           |
-| run       | ran         | run             |
-| say       | said        | said            |
-| see       | saw         | seen            |
-| sell      | sold        | sold            |
-| send      | sent        | sent            |
-| show      | showed      | shown/showed    |
-| shut      | shut        | shut            |
-| sing      | sang        | sung            |
-| sit       | sat         | sat             |
-| sleep     | slept       | slept           |
-| speak     | spoke       | spoken          |
-| spend     | spent       | spent           |
-| stand     | stood       | stood           |
-| swim      | swam        | swum            |
-| sow       | sowed       | sown            |
-| spill     | spilt       | spilt           |
-| spoil     | spoilt      | spoilt          |
-| stink     | stank       | stunk           |
-| strike    | struck      | struck          |
-| take      | took        | taken           |
-| teach     | taught      | taught          |
-| tell      | told        | told            |
-| think     | thought     | thought         |
-| throw     | threw       | thrown          |
-| understand| understood  | understood      |
-| wake      | woke        | woken           |
-| wear      | wore        | worn            |
-| win       | won         | won             |
-| write     | wrote       | written         |
-| weep      | wept        | wept            |
+# Kelvin
+°C = K − 273
+K = °C + 273
+# Kinetische Energie
+- 
+- Teilchen mit geringerer Masse bewegen sich schneller und diffundieren daher schneller.
+
+# Bewegung von Teilchen in einem Stoff (Beispiel: Verdampfen):
+- Beim Verdampfen bewegen sich die Teilchen unterschiedlich schnell. Die schnelleren Teilchen können die Flüssigkeit verlassen und in den gasförmigen Zustand übergehen.
+
+# Umwandlung von Skelettformeln in Summenformeln:
+Skelettformeln zeigen die Anordnung der Atome. Um diese in eine Summenformel umzuwandeln, zählen Sie die Anzahl jedes Atoms und schreiben es als Summenformel auf.
+
+# Bedingungen zum Richtigstellen von Reaktionsgleichungen:
+- Massenerhaltung: Die Anzahl der Atome jedes Elements muss auf beiden Seiten der Gleichung gleich sein.
+- Ladungserhaltung: Die Gesamtladung muss auf beiden Seiten gleich sein.
+- Phasenberücksichtigung: Die physikalischen Zustände (fest, flüssig, gasförmig) müssen berücksichtigt werden.
+
+# Berechnung der Molmasse und der Stoffmenge:
+- Molmasse ist die Masse eines Mols eines Stoffes, oft in g/mol angegeben. Sie wird durch Addition der Atommassen der Elemente in der Verbindung berechnet.
+- Die Stoffmenge (in Mol) kann berechnet werden, indem man die Masse des Stoffes durch die Molmasse teilt.
