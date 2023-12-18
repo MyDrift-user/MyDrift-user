@@ -1,5 +1,5 @@
-# Kelvin
-°C = K − 273
+# Kelvin (-272.15 = 0K)
+°C = K - 273
 K = °C + 273
 # Kinetische Energie
 - 
@@ -9,7 +9,7 @@ K = °C + 273
 - Beim Verdampfen bewegen sich die Teilchen unterschiedlich schnell. Die schnelleren Teilchen können die Flüssigkeit verlassen und in den gasförmigen Zustand übergehen.
 
 # Umwandlung von Skelettformeln in Summenformeln:
-Skelettformeln zeigen die Anordnung der Atome. Um diese in eine Summenformel umzuwandeln, zählen Sie die Anzahl jedes Atoms und schreiben es als Summenformel auf.
+- Skelettformeln zeigen die Anordnung der Atome. Um diese in eine Summenformel umzuwandeln, zählen Sie die Anzahl jedes Atoms und schreiben es als Summenformel auf.
 
 # Bedingungen zum Richtigstellen von Reaktionsgleichungen:
 - Massenerhaltung: Die Anzahl der Atome jedes Elements muss auf beiden Seiten der Gleichung gleich sein.
@@ -20,4 +20,6 @@ Skelettformeln zeigen die Anordnung der Atome. Um diese in eine Summenformel umz
 - Molmasse ist die Masse eines Mols eines Stoffes, oft in g/mol angegeben. Sie wird durch Addition der Atommassen der Elemente in der Verbindung berechnet.
 - Die Stoffmenge (in Mol) kann berechnet werden, indem man die Masse des Stoffes durch die Molmasse teilt.
 
-[https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Phase_change_-_de.svg/400px-Phase_change_-_de.svg.png]
+= = Doppelbindung
+
+1 Mol : 6,02214076 × 10^23 Teilchen
