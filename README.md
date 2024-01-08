@@ -1,7 +1,5 @@
 # Hi there 👋
 
-<h3 MyDrift/h3>
-
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MyDrift-user&theme=radical) 
 
 ## 🌐 Social:
