@@ -1,7 +1,8 @@
 ### Hi there 👋
 
 <h3 MyDrift/h3>
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=mydrift-user)](https://github.com/anuraghazra/github-readme-stats)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MyDrift-user&theme=radical) 
 
 # 💫 About Me:
 I'm passionate about building high-quality, user-friendly software 📱🖥️. 
