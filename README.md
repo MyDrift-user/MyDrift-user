@@ -4,12 +4,7 @@
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MyDrift-user&theme=radical) 
 
-# 💫 About Me:
-I'm passionate about building high-quality, user-friendly software 📱🖥️. 
-I'm also a big fan of open source software, and I love contributing to projects.
-
-
-## 🌐 Socials:
+## 🌐 Social:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.com/users/679006161554505729) 
 
 Preferences:
