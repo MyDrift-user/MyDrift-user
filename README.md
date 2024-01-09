@@ -8,5 +8,5 @@
 
 ### 🤝 Preferences:
 
-* Programming languages: Python 🐍, JavaScript 🐠, CSS, ✍️, C/C# 💻
 * Prefered HyperVisor: Proxmox VE ⚡🦎
+* * Programming languages: Python 🐍, JavaScript 🐠, CSS, ✍️, C/C# 💻
