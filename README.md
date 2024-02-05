@@ -8,5 +8,7 @@
 
 ### 🤝 Preferences:
 
-* Prefered HyperVisor: Proxmox VE ⚡🦎
-* Programming languages: Python 🐍, JavaScript 🐠, CSS, ✍️, C/C# 💻
+* HyperVisor: Proxmox VE ⚡🦎
+* Programming languages: Python 🐍, JavaScript 🐠, CSS ✍️, C/C# 💻
+* Working on: [MidnightMoodle](https://github.com/MyDrift-user/MidnightMoodle)
+* Planned: Projects with demos on subdomains.
