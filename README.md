@@ -12,6 +12,6 @@
 ### 🤝 Preferences:
 
 * HyperVisor: Proxmox VE ⚡🦎
-* Programming languages: Python 🐍, JavaScript 🐠, CSS ✍️, C/C# 💻
+* Programming languages: Powershell, Python 🐍, JavaScript 🐠, CSS ✍️, C/C# 
 * Working on: [WinToolBox](https://github.com/MyDrift-user/WinToolbox) & [Axilar](https://github.com/MyDrift-user/Axilar)
 * Planned: Projects with demos on subdomains.
