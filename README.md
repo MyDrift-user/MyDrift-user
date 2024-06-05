@@ -12,5 +12,4 @@
 ### 🤝 Preferences:
 
 * Programming languages: Powershell, Python 🐍, JavaScript 🐠, CSS ✍️, a bit of C/C++ and C# 
-* Working on: [WinToolBox](https://github.com/MyDrift-user/WinToolbox) & hoping to work on other repos soon!
-* HyperVisor: Proxmox VE ⚡🦎
+* Working on: Organizing Repos & Management
