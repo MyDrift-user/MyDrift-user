@@ -16,4 +16,4 @@ Due to these commitments, there might be times when I'm not very active. But I a
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.com/users/679006161554505729) 
 
 ---
-[![](https://komarev.com/ghpvc/?username=mydrift-user&label=Profile%20views&color=yellowgreen&style=for-the-badge)](https://github.com/Hutch79)
+[![](https://komarev.com/ghpvc/?username=mydrift-user&label=Profile%20views&color=yellowgreen&style=for-the-badge)](https://github.com/mydrift-user)
