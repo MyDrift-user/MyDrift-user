@@ -2,7 +2,7 @@
 
 I'm a **17-year-old Junior ICT System Engineer**, passionate about all aspects of computer science and constantly learning new stuff!
 
-I'm also pursuing a **Swiss Federal Vocational Baccalaureate** to broaden my educational horizons and studying for the **C1 Cambridge English Qualification**.
+I'm also pursuing a **Swiss Federal Vocational Baccalaureate** to broaden my educational horizons.
 
 Due to these commitments, there might be times when I'm not very active. But I always return :)
 
