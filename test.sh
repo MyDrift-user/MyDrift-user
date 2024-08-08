@@ -14,9 +14,9 @@ draw_progress() {
 
     # Create the progress bar
     bar=$(printf "%${filled}s" | tr ' ' '#')
-    bar+=$(printf "%${empty}s" | tr ' ' '.')
+    empty_space=$(printf "%${empty}s" | tr ' ' '.')
 
-    printf "\rProgress: [%-${width}s] %d%%" "$bar" $((progress * 100 / total_steps))
+    printf "\rProgress: [%-${width}s] %d%%" "$bar$empty_space" $((progress * 100 / total_steps))
 }
 
 check() {
@@ -91,3 +91,5 @@ check $? "Deleting the temporary file"
 
 progress=$((progress + 1))
 draw_progress
+
+printf '\nScript completed successfully!\n'
