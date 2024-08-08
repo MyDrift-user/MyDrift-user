@@ -13,8 +13,8 @@ draw_progress() {
     empty=$((width - filled))
 
     # Create the progress bar
-    bar=$(printf "%${filled}s" | tr ' ' '#')
-    empty_space=$(printf "%${empty}s" | tr ' ' '.')
+    bar=$(printf "%-${filled}s" | tr ' ' '#')
+    empty_space=$(printf "%-${empty}s" | tr ' ' '.')
 
     printf "\rProgress: [%-${width}s] %d%%" "$bar$empty_space" $((progress * 100 / total_steps))
 }
