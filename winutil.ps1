@@ -61,7 +61,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     }
 
     if ($wtInstalled) {
-        Start-Process wt.exe -ArgumentList "-NoProfile $powershellcmd -ExecutionPolicy Bypass -NoProfile -File $PSScriptRoot\winutil.ps1 -Run" -Verb RunAs
+        Start-Process wt.exe -ArgumentList "$powershellcmd -ExecutionPolicy Bypass -File $PSScriptRoot\winutil.ps1 -Run" -Verb RunAs
     } else {
         Start-Process $powershellcmd -ArgumentList "-ExecutionPolicy Bypass -NoProfile -File $PSScriptRoot\\winutil.ps1 -Run" -Verb RunAs
     }
