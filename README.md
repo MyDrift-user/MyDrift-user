@@ -14,8 +14,5 @@ While I'm not an expert in all my Tech Stack, I'm dedicated to continuously expa
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=MyDrift-user&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
----
-[![](https://visitcount.itsvg.in/api?id=MyDrift-user&icon=0&color=0)](https://visitcount.itsvg.in)
-
 ### 🌐 Social:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.com/users/679006161554505729) 
