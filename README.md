@@ -76,7 +76,3 @@
 ---
 
 [![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mydrift-user&theme=github-compact)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
----
-### 🌐 Social:
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.com/users/679006161554505729) 
