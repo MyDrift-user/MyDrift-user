@@ -555,31 +555,26 @@ def render_stack(theme_name: str) -> str:
 # --------------------------------------------------------------------------
 
 HW = 900
-HH = 242
+HH = 204
 
 
 def render_header(d: dict[str, Any], theme_name: str) -> str:
     """
-    The hero card.
+    The hero card: who, what, and four live numbers. Nothing else.
 
     This deliberately replaces the usual stack of a gradient banner, a typing
     SVG and a row of shields. Those come from three different projects with
     three different visual languages, and pasted together they read as
-    assembled rather than designed. One card, one type scale, one palette.
+    assembled rather than designed.
     """
     t = THEMES[theme_name]
     o: list[str] = []
     add = o.append
 
-    tagline = "declare it once, reproduce it anywhere"
-    char_w = 8.4                       # ui-monospace advance at 14px
-    tag_w = char_w * len(tagline)
-    tag_x, tag_y = 44, 202
-
     add(
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{HW}" height="{HH}" '
         f'viewBox="0 0 {HW} {HH}" role="img" '
-        f'aria-label="{escape(d["name"])} -- {escape(tagline)}">'
+        f'aria-label="{escape(d["name"])} -- ICT System Engineer">'
     )
 
     add("<defs>")
@@ -588,13 +583,6 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
         f'<path d="M30 0H0V30" fill="none" stroke="{t["grid"]}" stroke-width="1"/>'
         f"</pattern>"
     )
-    # Reveals the tagline left-to-right; the caret rides the same edge.
-    add(
-        f'<clipPath id="typeclip">'
-        f'<rect class="type" x="{tag_x}" y="{tag_y - 14}" '
-        f'width="{tag_w:.0f}" height="20"/>'
-        f"</clipPath>"
-    )
     add("</defs>")
 
     add(
@@ -602,26 +590,13 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
         "@keyframes hrise{from{opacity:0;transform:translateY(10px)}"
         "to{opacity:1;transform:translateY(0)}}"
         "@keyframes hfade{from{opacity:0}to{opacity:1}}"
-        f"@keyframes typein{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}"
-        # Rides from left to right, but expressed as a negative start offset so
-        # the caret's *resting* position is the end of the line. A renderer that
-        # ignores CSS animation (rsvg, a thumbnailer) then draws it correctly
-        # rather than parking it on top of the first character.
-        f"@keyframes ride{{from{{transform:translateX(-{tag_w:.0f}px)}}"
-        f"to{{transform:translateX(0)}}}}"
-        "@keyframes wink{0%,45%{opacity:1}50%,100%{opacity:0}}"
         ".hr{animation:hrise .6s cubic-bezier(.22,1,.36,1) both}"
         ".hf{animation:hfade .8s ease-out both}"
-        f".type{{animation:typein 1.9s steps({len(tagline)}) .55s both;"
-        "transform-origin:left center}"
-        f".caret{{animation:ride 1.9s steps({len(tagline)}) .55s both,"
-        "wink 1s steps(1) 2.45s infinite}"
         "@media(prefers-reduced-motion:reduce){"
-        ".hr,.hf,.type,.caret{animation:none;opacity:1;transform:none}}"
+        ".hr,.hf{animation:none;opacity:1;transform:none}}"
         "</style>"
     )
 
-    # frame
     add(f'<rect width="{HW}" height="{HH}" rx="10" fill="{t["bg"]}"/>')
     add(f'<rect width="{HW}" height="{HH}" rx="10" fill="url(#hgrid)" opacity="0.45"/>')
     add(
@@ -629,53 +604,33 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
         f'fill="none" stroke="{t["line"]}" stroke-width="1"/>'
     )
 
-    # identity
+    sans = "ui-sans-serif, -apple-system, 'Segoe UI', Inter, sans-serif"
+
     add(
         '<g class="hr" style="animation-delay:.05s">'
-        + text(44, 100, d["name"], fill=t["text"], size=52, weight=800,
-               family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, sans-serif")
+        + text(44, 96, d["name"], fill=t["text"], size=52, weight=800, family=sans)
         + "</g>"
     )
     add(
-        f'<rect class="hr" style="animation-delay:.14s" x="46" y="118" '
+        f'<rect class="hr" style="animation-delay:.14s" x="46" y="114" '
         f'width="46" height="2" fill="{t["accent"]}"/>'
     )
     add(
         '<g class="hr" style="animation-delay:.2s">'
-        + text(44, 146, "ICT System Engineer  ·  Automation  ·  Self-hosting",
-               fill=t["text"], size=14.5,
-               family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, sans-serif")
+        + text(44, 142, "ICT System Engineer  ·  Automation  ·  Self-hosting",
+               fill=t["text"], size=14.5, family=sans)
         + "</g>"
     )
-
-    # The facts that used to live in a separate prose block. Folded in here so
-    # the page opens with one panel instead of a panel plus a paragraph nobody
-    # scrolling a README is going to read.
     add(
         '<g class="hr" style="animation-delay:.26s">'
-        + text(44, 170,
-               "Switzerland  ·  Federal Vocational Baccalaureate",
-               fill=t["muted"], size=12.5,
-               family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, "
-                      "sans-serif")
+        + text(44, 166, "Switzerland  ·  Federal Vocational Baccalaureate",
+               fill=t["muted"], size=12.5, family=sans)
         + "</g>"
     )
 
-    # typed tagline
     add(
-        f'<g clip-path="url(#typeclip)">'
-        + text(tag_x, tag_y, tagline, fill=t["muted"], size=14)
-        + "</g>"
-    )
-    add(
-        f'<rect class="caret" x="{tag_x + tag_w:.0f}" y="{tag_y - 12}" width="8" '
-        f'height="16" fill="{t["accent"]}"/>'
-    )
-
-    # divider + stat chips
-    add(
-        f'<line class="hf" style="animation-delay:.3s" x1="566" y1="52" '
-        f'x2="566" y2="194" stroke="{t["line"]}" stroke-width="1"/>'
+        f'<line class="hf" style="animation-delay:.3s" x1="566" y1="46" '
+        f'x2="566" y2="178" stroke="{t["line"]}" stroke-width="1"/>'
     )
     chips = [
         ("FOLLOWERS", human(d["followers"])),
@@ -686,7 +641,7 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
     for i, (label, value) in enumerate(chips):
         col, row = i % 2, i // 2
         cx = 616 + col * 140
-        cy = 98 + row * 64
+        cy = 92 + row * 62
         add(
             f'<g class="hr" style="animation-delay:{0.3 + i * 0.07:.2f}s">'
             + text(cx, cy - 16, label, fill=t["muted"], size=9, weight=600)
@@ -703,7 +658,7 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
 # --------------------------------------------------------------------------
 
 W = 900
-H = 490
+H = 424
 PAD = 26
 
 
@@ -736,13 +691,11 @@ def render(d: dict[str, Any], theme_name: str) -> str:
         "to{opacity:1;transform:translateY(0)}}"
         "@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}"
         "@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}"
-        "@keyframes blink{0%,45%{opacity:1}50%,100%{opacity:0}}"
         ".r{animation:rise .55s cubic-bezier(.22,1,.36,1) both}"
         ".g{animation:grow 1.05s cubic-bezier(.22,1,.36,1) both;transform-origin:left center}"
         ".c{animation:pop .34s ease-out both}"
-        ".cursor{animation:blink 1.1s steps(1) infinite}"
         "@media(prefers-reduced-motion:reduce){"
-        ".r,.g,.c,.cursor{animation:none;opacity:1;transform:none}}"
+        ".r,.g,.c{animation:none;opacity:1;transform:none}}"
         "</style>"
     )
 
@@ -755,22 +708,6 @@ def render(d: dict[str, Any], theme_name: str) -> str:
     )
 
     # ---- title bar --------------------------------------------------------
-    add(f'<rect x="1" y="1" width="{W - 2}" height="40" rx="9" fill="{t["panel"]}"/>')
-    add(f'<rect x="1" y="30" width="{W - 2}" height="11" fill="{t["panel"]}"/>')
-    add(f'<line x1="0" y1="41" x2="{W}" y2="41" stroke="{t["line"]}" stroke-width="1"/>')
-    add(text(PAD, 26, f"{d['login']}@github", fill=t["muted"], size=12))
-
-    # ---- identity line ----------------------------------------------------
-    y = 74
-    prompt = f"whoami --name '{d['name']}'"
-    # ui-monospace advance width is ~0.6em; used to park the caret after the text
-    caret_x = PAD + 18 + 9.0 * len(prompt)
-    add(text(PAD, y, "$", fill=t["accent"], size=15, weight=700))
-    add(text(PAD + 18, y, prompt, fill=t["text"], size=15, weight=600))
-    add(
-        f'<rect class="cursor" x="{caret_x:.1f}" y="{y - 12}" width="9" '
-        f'height="15" fill="{t["accent"]}"/>'
-    )
 
     # ---- stat tiles -------------------------------------------------------
     # Deliberately unaccented. Six tiles in six colours is decoration; the
@@ -783,7 +720,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
         ("STARS", d["stars"]),
         ("FOLLOWERS", d["followers"]),
     ]
-    tw, gap, ty = 132, 8, 92
+    tw, gap, ty = 132, 8, 26
     for i, (label, value) in enumerate(tiles):
         tx = PAD + i * (tw + gap)
         add(
@@ -797,7 +734,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
         )
 
     # ---- language bars ----------------------------------------------------
-    ly = 182
+    ly = 116
     add(text(PAD, ly, "// LANGUAGE DISTRIBUTION", fill=t["muted"], size=10.5, weight=600))
 
     ranked = sorted(d["langs"].items(), key=lambda kv: -kv[1]["size"])[:6]
@@ -834,7 +771,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
         )
 
     # ---- contribution heatmap --------------------------------------------
-    hy = 306
+    hy = 240
     add(
         text(PAD, hy, "// CONTRIBUTION CALENDAR", fill=t["muted"], size=10.5, weight=600)
     )
