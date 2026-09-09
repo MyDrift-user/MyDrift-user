@@ -654,8 +654,7 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
     add(
         '<g class="hr" style="animation-delay:.26s">'
         + text(44, 170,
-               "Switzerland  ·  Federal Vocational Baccalaureate  ·  "
-               "learning Rust + Nix",
+               "Switzerland  ·  Federal Vocational Baccalaureate",
                fill=t["muted"], size=12.5,
                family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, "
                       "sans-serif")
