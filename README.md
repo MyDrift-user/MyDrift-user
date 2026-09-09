@@ -1,78 +1,140 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Sigmar&weight=900&size=35&pause=1000&color=FFFFFF&center=true&vCenter=true&width=435&lines=Hey+There!%F0%9F%91%8B;I'm+MyDrift‑user!" alt="Typing SVG" />
 
-  **18‑year‑old Junior ICT System Engineer & Swiss Vocational Baccalaureate student**
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/header-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/header-light.svg" />
+  <img alt="MyDrift -- ICT System Engineer, automation, self-hosting" src="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/header-dark.svg" width="100%" />
+</picture>
+
 </div>
 
 ---
 
-### 🚀 About Me
-- Passionate about **computer science**, especially **Windows internals**, **automation**, and **system utilities**
-- Pursuing a **Swiss Federal Vocational Baccalaureate** while working as an ICT apprentice
+<!-- ─────────────────────────── whoami ─────────────────────────── -->
 
----
 
-### 🛠 Tech Stack & Tools
+<!-- ──────────────────────── live dashboard ──────────────────────── -->
+
+### `~$ ./dashboard --live`
+
 <div align="center">
-  <table>
-    <tr>
-      <td>
-        <strong>Scripting:</strong><br/>
-        <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell" />
-        <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
-        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
-        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-      </td>
-      <td rowspan="4" style="vertical-align: middle;">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MyDrift-user&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <strong>Platforms:</strong><br/>
-        <img src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white" alt="Windows Terminal" />
-        <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <strong>Infrastructure:</strong><br/>
-        <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-        <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white" alt="Cloudflare" />
-        <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud" />
-        <img src="https://img.shields.io/badge/Self-Hosting-00AEEF.svg?style=for-the-badge" alt="Self-Hosting" />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <strong>Tools:</strong><br/>
-        <img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-        <img src="https://img.shields.io/badge/Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi" alt="Raspberry Pi" />
-        <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-        <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-      </td>
-    </tr>
-  </table>
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/dashboard-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/dashboard-light.svg" />
+  <img alt="GitHub statistics dashboard" src="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/dashboard-dark.svg" width="100%" />
+</picture>
 </div>
 
+<sub>Rendered from the GitHub GraphQL API by <a href="scripts/gen_dashboard.py"><code>scripts/gen_dashboard.py</code></a>, committed by CI, served from this repository. No external rendering service, no rate limit, nothing to expire.</sub>
 
- 
 ---
 
-### 📌 Contributions
+<!-- ───────────────────────── tech stack ───────────────────────── -->
+
+### `~$ cat stack.toml`
+
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MyDrift-user&theme=dark&hide_border=false&include_all_commits=true&count_private=true" />
-  <img src="https://nirzak-streak-stats.vercel.app/?user=MyDrift-user&theme=dark&hide_border=false" />
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/stack-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/stack-light.svg" />
+  <img alt="Technology stack" src="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/stack-dark.svg" width="100%" />
+</picture>
 </div>
 
 ---
 
-### 📚 Education & Career
-- ICT System Engineer Apprentice
-- Scholar of the **Swiss Federal Vocational Baccalaureate**
-- ![Cambridge C1](https://img.shields.io/badge/English%20Level-C1%20Advanced-blue?style=flat-square&logo=bookstack&logoColor=white)
+<!-- ──────────────────────── architecture ──────────────────────── -->
+
+
+<!-- ────────────────────────── projects ────────────────────────── -->
+
+<!-- PROJECTS -- temporarily hidden. Delete this line and the closing
+     comment marker below to bring the section back. The card grid is
+     still generated by CI, so projects-dark.svg / projects-light.svg
+     stay current on the output branch while this is switched off.
+
+### `~$ ls -la projects/`
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/projects-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/projects-light.svg" />
+  <img alt="Selected projects" src="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/projects-dark.svg" width="100%" />
+</picture>
+</div>
+
+---
+-->
+
+<!-- ───────────────────────── contributions ───────────────────────── -->
+
+### `~$ git log --graph --all`
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/snake-light.svg" />
+  <img alt="Contribution graph being eaten by a snake" src="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/snake-dark.svg" width="100%" />
+</picture>
+
+</div>
 
 ---
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mydrift-user&theme=github-compact)](https://github.com/ashutosh00710/github-readme-activity-graph)
+<!-- ────────────────────────── details ────────────────────────── -->
+
+<details>
+<summary><b><code>~$ ./contrib --3d</code></b> — the same year, isometric</summary>
+
+<br/>
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/contrib-3d-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/contrib-3d-light.svg" />
+  <img alt="Contribution calendar rendered in 3D" src="https://raw.githubusercontent.com/MyDrift-user/MyDrift-user/output/contrib-3d-dark.svg" width="86%" />
+</picture>
+</div>
+
+</details>
+
+<details>
+<summary><b><code>~$ cat notes.md</code></b> — how this profile is built</summary>
+
+<br/>
+
+Everything on this page is either static Markdown or an SVG generated by CI in this repository. That is a deliberate constraint, and it came from watching the previous version rot.
+
+The usual profile README leans on free rendering services. Those services are genuinely good software, but the *public instances* are hobby-funded, and when one hits its billing cap it starts answering `402 Payment Required`. The `<img>` tag stays valid, GitHub keeps serving the page, and the profile displays broken images to every visitor with no signal to the owner.
+
+So this repository:
+
+| Concern | Approach |
+|---|---|
+| Statistics card | Rendered locally by [`gen_dashboard.py`](scripts/gen_dashboard.py); committed as SVG |
+| Asset churn | Published to the `output` branch, keeping `main` history readable |
+| Third-party rot | [`check_links.py`](scripts/check_links.py) probes every embedded URL weekly and opens an issue on failure |
+| Theme handling | `<picture>` + `prefers-color-scheme`, dark and light variants for every generated asset |
+| Motion | CSS keyframes inside the SVG, gated behind `prefers-reduced-motion` |
+
+[![link health](https://img.shields.io/github/actions/workflow/status/MyDrift-user/MyDrift-user/link-health.yml?style=flat-square&labelColor=0d1117&color=39d353&label=asset%20health)](https://github.com/MyDrift-user/MyDrift-user/actions/workflows/link-health.yml)
+
+The three panels come from roughly 825 lines of dependency-free Python: one GraphQL round trip, a REST fallback, and a hand-written SVG emitter. No `pip install` step, so CI cannot break on a transitive dependency either.
+
+</details>
+
+<details>
+<summary><b><code>~$ ./contact --list</code></b></summary>
+
+<br/>
+
+<a href="https://github.com/MyDrift-user"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<!-- Add your own: uncomment and fill in.
+<a href="mailto:you@example.com"><img src="https://img.shields.io/badge/Email-1f6feb?style=for-the-badge&logo=maildotru&logoColor=white" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/USERNAME"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+-->
+
+</details>
+
+---
