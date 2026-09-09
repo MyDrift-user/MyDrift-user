@@ -1,0 +1,52 @@
+# Fails loudly when an embedded asset dies.
+#
+# The failure mode this catches is specific and common: a free rendering
+# service hits its billing cap and starts returning 402, or its host is
+# retired. The image element stays valid, GitHub keeps serving the README,
+# and the profile quietly displays broken images to every visitor until
+# somebody happens to notice. Nothing else alerts on this.
+
+name: link health
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Monday morning
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "README.md"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Probe every embedded asset
+        id: probe
+        run: python3 scripts/check_links.py README.md | tee /tmp/report.txt
+
+      - name: Open an issue when something is dead
+        if: failure() && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Reuse a single rolling issue rather than filing a new one weekly.
+          existing=$(gh issue list --state open --label readme-health \
+                       --json number --jq '.[0].number')
+          body="Automated check found dead assets in the profile README."$'\n\n'
+          body+='```'$'\n'"$(tail -40 /tmp/report.txt)"$'\n''```'
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "Dead assets in profile README" \
+              --label readme-health --body "$body"
+          fi

@@ -1,0 +1,50 @@
+# Optional. lowlighter/metrics renders a far richer infographic than the
+# built-in dashboard, but it requires a classic PAT, so it is opt-in and
+# manual by default. Uncomment the schedule once PROFILE_TOKEN exists.
+#
+# Token: github.com/settings/tokens -> classic -> scopes `public_repo`,
+# `read:user`. Store as the repository secret PROFILE_TOKEN.
+
+name: metrics (optional)
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "43 4 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    # Skips itself rather than failing red when the token is absent.
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Guard on token
+        id: guard
+        run: |
+          if [ -z "${{ secrets.PROFILE_TOKEN }}" ]; then
+            echo "PROFILE_TOKEN not set; skipping." >> "$GITHUB_STEP_SUMMARY"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Languages, activity and habits
+        if: steps.guard.outputs.run == 'true'
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.PROFILE_TOKEN }}
+          filename: generated/metrics.svg
+          committer_branch: output
+          base: header, repositories
+          config_timezone: Europe/Zurich
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_charts: yes
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year

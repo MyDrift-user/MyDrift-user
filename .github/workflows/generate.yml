@@ -1,0 +1,80 @@
+# Renders every dynamic asset the profile README embeds, then publishes them
+# to the `output` branch.
+#
+# Why a separate branch: these SVGs are regenerated daily. Committing them to
+# `main` would bury the actual source history under a rolling wall of
+# "generated" commits. `output` absorbs that churn; `main` stays readable.
+
+name: generate profile assets
+
+on:
+  schedule:
+    # 03:17 UTC. Deliberately off the hour -- GitHub's scheduler queues a
+    # stampede at :00 and cron jobs there can be delayed by 30+ minutes.
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/generate.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # PROFILE_TOKEN is optional. The built-in GITHUB_TOKEN can read public
+      # contribution data; a classic PAT with `read:user` additionally exposes
+      # private contributions, which is usually the difference between a
+      # dashboard that says 200 commits and one that says 2000.
+      - name: Render statistics dashboard
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/gen_dashboard.py \
+            --user "${{ github.repository_owner }}" \
+            --out generated
+
+      - name: Render contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            generated/snake-dark.svg?palette=github-dark
+            generated/snake-light.svg?palette=github-light
+
+      - name: Render 3D contribution calendar
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          MAX_REPOS: 100
+
+      - name: Collect 3D output
+        run: |
+          mv profile-3d-contrib/profile-night-view.svg generated/contrib-3d-dark.svg
+          mv profile-3d-contrib/profile-green-animate.svg generated/contrib-3d-light.svg
+          ls -la generated/
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: generated
+          keep_history: false
+          commit_message: "chore: regenerate profile assets"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
