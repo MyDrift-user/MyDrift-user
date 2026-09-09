@@ -571,7 +571,7 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
     o: list[str] = []
     add = o.append
 
-    tagline = "if it runs twice, it should run itself"
+    tagline = "declare it once, reproduce it anywhere"
     char_w = 8.4                       # ui-monospace advance at 14px
     tag_w = char_w * len(tagline)
     tag_x, tag_y = 44, 202
@@ -758,17 +758,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
     add(f'<rect x="1" y="1" width="{W - 2}" height="40" rx="9" fill="{t["panel"]}"/>')
     add(f'<rect x="1" y="30" width="{W - 2}" height="11" fill="{t["panel"]}"/>')
     add(f'<line x1="0" y1="41" x2="{W}" y2="41" stroke="{t["line"]}" stroke-width="1"/>')
-    add(
-        text(PAD, 26, f"{d['login']}@github ~ ./dashboard --live",
-             fill=t["muted"], size=12)
-    )
-    add(
-        text(
-            W - PAD, 26,
-            dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%MZ"),
-            fill=t["muted"], size=11, anchor="end",
-        )
-    )
+    add(text(PAD, 26, f"{d['login']}@github", fill=t["muted"], size=12))
 
     # ---- identity line ----------------------------------------------------
     y = 74
