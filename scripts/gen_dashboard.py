@@ -370,11 +370,9 @@ def render_projects(d: dict[str, Any], theme_name: str) -> str:
     add("</defs>")
     add(
         "<style>"
-        "@keyframes pin{from{opacity:0;transform:translateY(8px)}"
-        "to{opacity:1;transform:translateY(0)}}"
-        ".p{animation:pin .5s cubic-bezier(.22,1,.36,1) both}"
-        "@media(prefers-reduced-motion:reduce){.p{animation:none;opacity:1;"
-        "transform:none}}"
+        "@keyframes fade{from{opacity:0}to{opacity:1}}"
+        ".p{animation:fade .4s ease-out both}"
+        "@media(prefers-reduced-motion:reduce){.p{animation:none;opacity:1}}"
         "</style>"
     )
     add(f'<rect width="{PW}" height="{height:.0f}" rx="10" fill="{t["bg"]}"/>')
@@ -399,7 +397,7 @@ def render_projects(d: dict[str, Any], theme_name: str) -> str:
         stars = meta.get("stars", 0)
 
         card = [
-            f'<g class="p" style="animation-delay:{0.05 + i * 0.06:.2f}s">',
+            f'<g class="p">',
             f'<rect x="{x:.1f}" y="{y}" width="{card_w:.1f}" height="{card_h}" '
             f'rx="8" fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="1"/>',
             # language spine: the card's only colour, and it means something
@@ -505,11 +503,9 @@ def render_stack(theme_name: str) -> str:
     add("</defs>")
     add(
         "<style>"
-        "@keyframes sin{from{opacity:0;transform:translateY(6px)}"
-        "to{opacity:1;transform:translateY(0)}}"
-        ".s{animation:sin .45s cubic-bezier(.22,1,.36,1) both}"
-        "@media(prefers-reduced-motion:reduce){.s{animation:none;opacity:1;"
-        "transform:none}}"
+        "@keyframes fade{from{opacity:0}to{opacity:1}}"
+        ".s{animation:fade .4s ease-out both}"
+        "@media(prefers-reduced-motion:reduce){.s{animation:none;opacity:1}}"
         "</style>"
     )
 
@@ -532,7 +528,7 @@ def render_stack(theme_name: str) -> str:
             for name, colour, x, w in row:
                 cx = pad + x
                 add(
-                    f'<g class="s" style="animation-delay:{0.04 * index:.2f}s">'
+                    f'<g class="s">'
                     f'<rect x="{cx:.1f}" y="{y}" width="{w:.1f}" height="{chip_h}" '
                     f'rx="6" fill="{t["panel"]}" stroke="{t["line"]}" '
                     f'stroke-width="1"/>'
@@ -587,13 +583,9 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
 
     add(
         "<style>"
-        "@keyframes hrise{from{opacity:0;transform:translateY(10px)}"
-        "to{opacity:1;transform:translateY(0)}}"
-        "@keyframes hfade{from{opacity:0}to{opacity:1}}"
-        ".hr{animation:hrise .6s cubic-bezier(.22,1,.36,1) both}"
-        ".hf{animation:hfade .8s ease-out both}"
-        "@media(prefers-reduced-motion:reduce){"
-        ".hr,.hf{animation:none;opacity:1;transform:none}}"
+        "@keyframes fade{from{opacity:0}to{opacity:1}}"
+        ".hr,.hf{animation:fade .4s ease-out both}"
+        "@media(prefers-reduced-motion:reduce){.hr,.hf{animation:none;opacity:1}}"
         "</style>"
     )
 
@@ -607,29 +599,29 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
     sans = "ui-sans-serif, -apple-system, 'Segoe UI', Inter, sans-serif"
 
     add(
-        '<g class="hr" style="animation-delay:.05s">'
+        '<g class="hr">'
         + text(44, 96, d["name"], fill=t["text"], size=52, weight=800, family=sans)
         + "</g>"
     )
     add(
-        f'<rect class="hr" style="animation-delay:.14s" x="46" y="114" '
+        f'<rect class="hr" x="46" y="114" '
         f'width="46" height="2" fill="{t["accent"]}"/>'
     )
     add(
-        '<g class="hr" style="animation-delay:.2s">'
+        '<g class="hr">'
         + text(44, 142, "ICT System Engineer  ·  Automation  ·  Self-hosting",
                fill=t["text"], size=14.5, family=sans)
         + "</g>"
     )
     add(
-        '<g class="hr" style="animation-delay:.26s">'
+        '<g class="hr">'
         + text(44, 166, "Switzerland  ·  Federal Vocational Baccalaureate",
                fill=t["muted"], size=12.5, family=sans)
         + "</g>"
     )
 
     add(
-        f'<line class="hf" style="animation-delay:.3s" x1="566" y1="46" '
+        f'<line class="hf" x1="566" y1="46" '
         f'x2="566" y2="178" stroke="{t["line"]}" stroke-width="1"/>'
     )
     chips = [
@@ -643,7 +635,7 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
         cx = 616 + col * 140
         cy = 92 + row * 62
         add(
-            f'<g class="hr" style="animation-delay:{0.3 + i * 0.07:.2f}s">'
+            f'<g class="hr">'
             + text(cx, cy - 16, label, fill=t["muted"], size=9, weight=600)
             + text(cx, cy + 8, value, fill=t["text"], size=24, weight=700)
             + "</g>"
@@ -687,15 +679,8 @@ def render(d: dict[str, Any], theme_name: str) -> str:
     add(
         "<style>"
         "@keyframes fade{from{opacity:0}to{opacity:1}}"
-        "@keyframes rise{from{opacity:0;transform:translateY(9px)}"
-        "to{opacity:1;transform:translateY(0)}}"
-        "@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}"
-        "@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}"
-        ".r{animation:rise .55s cubic-bezier(.22,1,.36,1) both}"
-        ".g{animation:grow 1.05s cubic-bezier(.22,1,.36,1) both;transform-origin:left center}"
-        ".c{animation:pop .34s ease-out both}"
-        "@media(prefers-reduced-motion:reduce){"
-        ".r,.g,.c{animation:none;opacity:1;transform:none}}"
+        ".r,.g,.c{animation:fade .4s ease-out both}"
+        "@media(prefers-reduced-motion:reduce){.r,.g,.c{animation:none;opacity:1}}"
         "</style>"
     )
 
@@ -724,7 +709,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
     for i, (label, value) in enumerate(tiles):
         tx = PAD + i * (tw + gap)
         add(
-            f'<g class="r" style="animation-delay:{0.05 + i * 0.06:.2f}s">'
+            f'<g class="r">'
             f'<rect x="{tx}" y="{ty}" width="{tw}" height="62" rx="8" '
             f'fill="{t["panel"]}" stroke="{t["line"]}" stroke-width="1"/>'
             + text(tx + 14, ty + 24, label, fill=t["muted"], size=9.5, weight=600)
@@ -749,7 +734,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
     for i, (name, meta) in enumerate(ranked):
         seg = bw * meta["size"] / total
         add(
-            f'<rect class="g" style="animation-delay:{0.25 + i * 0.09:.2f}s" '
+            f'<rect class="g" '
             f'x="{cursor:.2f}" y="{by}" width="{seg:.2f}" height="12" '
             f'fill="{meta["color"]}"/>'
         )
@@ -763,7 +748,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
         lyy = by + 36 + row * 22
         pct = 100 * meta["size"] / total
         add(
-            f'<g class="r" style="animation-delay:{0.35 + i * 0.07:.2f}s">'
+            f'<g class="r">'
             f'<circle cx="{lx + 5}" cy="{lyy - 4}" r="5" fill="{meta["color"]}"/>'
             + text(lx + 17, lyy, name, fill=t["text"], size=11.5)
             + text(lx + 258, lyy, f"{pct:.1f}%", fill=t["muted"], size=11.5, anchor="end")
@@ -808,7 +793,7 @@ def render(d: dict[str, Any], theme_name: str) -> str:
         ncols = max(c for c, _, _, _ in cells) + 1
         for col, row, count, date_s in cells:
             add(
-                f'<rect class="c" style="animation-delay:{0.4 + col * 0.012:.2f}s" '
+                f'<rect class="c" '
                 f'x="{gx + col * step}" y="{gy + row * step}" width="{cell}" '
                 f'height="{cell}" rx="2.5" fill="{t["heat"][level(count)]}">'
                 f"<title>{date_s}: {count} contributions</title></rect>"
