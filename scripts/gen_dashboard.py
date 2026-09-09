@@ -703,7 +703,7 @@ def render_header(d: dict[str, Any], theme_name: str) -> str:
 # --------------------------------------------------------------------------
 
 W = 900
-H = 496
+H = 490
 PAD = 26
 
 
@@ -922,19 +922,6 @@ def render(d: dict[str, Any], theme_name: str) -> str:
             f'<rect x="{lx + i * 15}" y="{ly2}" width="11" height="11" rx="2.5" fill="{c}"/>'
         )
     add(text(lx + 5 * 15 + 4, ly2 + 9, "More", fill=t["muted"], size=9))
-
-    # ---- footer -----------------------------------------------------------
-    add(f'<line x1="{PAD}" y1="{H - 34}" x2="{W - PAD}" y2="{H - 34}" '
-        f'stroke="{t["line"]}" stroke-width="1"/>')
-    add(
-        text(PAD, H - 15,
-             f"repos {d['repos']}  |  forks {d['forks']}  |  member since {d['created']}",
-             fill=t["muted"], size=10.5)
-    )
-    add(
-        text(W - PAD, H - 15, "rendered in-repo by GitHub Actions -- no external service",
-             fill=t["muted"], size=10.5, anchor="end")
-    )
 
     add("</svg>")
     return "\n".join(o)
