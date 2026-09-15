@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="204" viewBox="0 0 900 204" role="img" aria-label="MyDrift -- ICT System Engineer">
+<defs>
+<pattern id="hgrid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#eef1f4" stroke-width="1"/></pattern>
+</defs>
+<style>@keyframes fade{from{opacity:0}to{opacity:1}}.hr,.hf{animation:fade .4s ease-out both}@media(prefers-reduced-motion:reduce){.hr,.hf{animation:none;opacity:1}}</style>
+<rect width="900" height="204" rx="10" fill="#ffffff"/>
+<rect width="900" height="204" rx="10" fill="url(#hgrid)" opacity="0.45"/>
+<rect x="0.5" y="0.5" width="899" height="203" rx="10" fill="none" stroke="#d8dee4" stroke-width="1"/>
+<g class="hr"><text x="44" y="96" fill="#1f2328" font-size="52" font-weight="800" text-anchor="start" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, sans-serif" opacity="1.0">MyDrift</text></g>
+<rect class="hr" x="46" y="114" width="46" height="2" fill="#0969da"/>
+<g class="hr"><text x="44" y="142" fill="#1f2328" font-size="14.5" font-weight="400" text-anchor="start" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, sans-serif" opacity="1.0">ICT System Engineer  ·  Automation  ·  Self-hosting</text></g>
+<g class="hr"><text x="44" y="166" fill="#59636e" font-size="12.5" font-weight="400" text-anchor="start" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, sans-serif" opacity="1.0">Switzerland  ·  Federal Vocational Baccalaureate</text></g>
+<line class="hf" x1="566" y1="46" x2="566" y2="178" stroke="#d8dee4" stroke-width="1"/>
+<g class="hr"><text x="616" y="76" fill="#59636e" font-size="9" font-weight="600" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">FOLLOWERS</text><text x="616" y="100" fill="#1f2328" font-size="24" font-weight="700" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">76</text></g>
+<g class="hr"><text x="756" y="76" fill="#59636e" font-size="9" font-weight="600" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">REPOSITORIES</text><text x="756" y="100" fill="#1f2328" font-size="24" font-weight="700" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">11</text></g>
+<g class="hr"><text x="616" y="138" fill="#59636e" font-size="9" font-weight="600" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">STARS EARNED</text><text x="616" y="162" fill="#1f2328" font-size="24" font-weight="700" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">3</text></g>
+<g class="hr"><text x="756" y="138" fill="#59636e" font-size="9" font-weight="600" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">SINCE</text><text x="756" y="162" fill="#1f2328" font-size="24" font-weight="700" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace" opacity="1.0">2023</text></g>
+</svg>
